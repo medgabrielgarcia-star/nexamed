@@ -1,0 +1,44 @@
+:root{
+  /* MARCA */
+  --azul-medico: #0099CC;
+  --azul-accion: #006B94;
+  --violeta: #6C63FF;
+  --violeta-accion: #5A51E8;
+  --coral: #E05A38;
+  --coral-action: #c23E1E;
+
+  /* NEUTROS */
+  --azul-profundo: #0A1929;
+  --negro: #111111;
+  --gris-texto: #4A5560;
+  --gris-claro: #F2F5F7;
+  --blanco: #FFFFFF;
+
+  /* ROLES(se usan en el resto del CSS) */
+  --color-fondo: var(--blanco);
+  --color-superficie: var(--gris-claro);
+  --color-texto: var(--azul-profundo);
+  --color-texto-secundario:var(--gris-texto);
+  --color-enlace: var(--azul-accion);
+
+  /* TIPOGRAFIA */
+  --fuente-titulos: "Montserrat", system-ui, sans-serif;
+  --fuente-texto: "Roboto", system-ui, sans-serif;
+}
+
+body{
+  margin: 0; 
+  font-family: var(--fuente-texto);
+  color: var(--color-texto);
+  background-color: var(--color-fondo);
+  line-height: 1.6;
+}
+
+h1, h2, h3{
+  font-family: var(--fuente-titulos);
+  line-height: 1.2;
+}
+
+a{
+  color: var(--color-enlace)
+}
