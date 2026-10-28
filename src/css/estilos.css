@@ -56,9 +56,16 @@
   --color-borde: #D4E3EC;
 
   /* TIPOGRAFIA */
-  --fuente-titulos: "Montserrat", system-ui, sans-seri;
+  --fuente-titulos: "Montserrat", system-ui, sans-serif;
   --fuente-texto: "Roboto", system-ui, sans-serif; 
 }
+
+/* BASE */
+
+*{
+  box-sizing: border-box;
+}
+
 
 body{
   margin: 0; 
@@ -77,12 +84,6 @@ h1, h2, h3{
 a{
   color: var(--color-enlace);
   text-decoration: none;
-}
-
-/* BASE */
-
-*{
-  box-sizing: border-box;
 }
 
 /* CABECERA */
@@ -116,7 +117,9 @@ a{
 .navegacion{
   display: flex;
   align-items: center;
-  gap: 0.5rem;
+  justify-content: flex-end;
+  gap: 0.25rem;
+  min-width: 0;
 }
 
 .navegacion__enlace{
@@ -124,7 +127,8 @@ a{
   align-items: center;
   justify-content: center;
   gap: 0.4rem;
-  padding: 0.65rem 0.8rem;
+  padding-inline: 0.5rem;
+  white-space: nowrap;
   border-radius: 0.65rem;
   color:var(--gris-texto);
   font-size: 0.95rem;
@@ -156,25 +160,34 @@ a{
   border: 1px solid var(--color-borde);
   border-radius: 16px;
   box-shadow: 0 4px 16px rgb(10 25 41 / 5%);
+  margin: 0 auto;
 }
 
 .presentacion__etiqueta{
+  display: inline-block;
+  margin: 0;
+  padding: 0.4rem 0.8rem;
   color: var(--azul-accion);
+  background-color: var(--color-fondo);
+  border-radius: 999px;
+  font-size: 0.85;
   font-weight: 700;
 }
 
 .presentacion h1{
-  max-width: 650px;
-  margin-block: 1rem;
-  font-size: clamp(2rem, 5vw, 3.5rem);
+  max-width: 600px;
+  margin-block: 1.25rem 1rem;
+  font-size: clamp(2.2rem, 4.5vw, 3.5rem);
+  line-height: 1.15;
+  letter-spacing: -0.04em;
 }
 
 .presentacion__descripcion{
-  max-width: 600px;
+  max-width: 540px;
   margin-block: 0;
   color:var(--color-texto-secundario);
   font-size: 1.1rem;
-  line-height: 1.7;
+  line-height: 1.8;
 }
 
 /* NAVEGACIÓN MOVIL */
@@ -199,7 +212,7 @@ a{
     grid-template-columns: repeat(5, minmax(0, 1fr));
     gap: 0;
     padding: 0.5rem 0.25rem;
-    padding-bottom: calc(0.5rem + env(safe-area-insert-bottom));
+    padding-bottom: calc(0.5rem + env(safe-area-inset-bottom));
     background-color: var(--blanco);
     border-top: 1px solid #DCE3E8; 
   }
@@ -225,7 +238,7 @@ a{
   }
 
   .presentacion {
-    padding-block: 2.5rem;
+    padding-block: 2rem 1.25rem;
   }
 }
 
@@ -334,5 +347,124 @@ a{
 @media (max-width: 500px) {
   .pie {
     display: none;
+  }
+}
+
+
+
+/* ACCESOS A LAS SECCIONES */
+
+.secciones {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+  margin-block: 2.5rem 3rem;
+}
+
+.tarjeta {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 1.5rem;
+  background-color: var(--color-superficie);
+  border: 1px solid var(--color-borde);
+  border-radius: 16px;
+  text-decoration: none;
+}
+
+@media (max-width: 500px) {
+  .secciones {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+.tarjeta__icono {
+  display: grid;
+  place-items: center;
+  width: 3rem;
+  height: 3rem;
+  margin-bottom: 1rem;
+  color: var(--azul-accion);
+  background-color: var(--color-fondo);
+  border-radius: 12px;
+}
+
+.tarjeta__icono svg {
+  display: block;
+  width: 1.5rem;
+  height: 1.5rem;
+  flex-shrink: 0;
+}
+
+
+.tarjeta__titulo {
+  margin: 0 0 0.5rem;
+  color: var(--color-texto);
+  font-family: var(--fuente-titulos);
+  font-size: 1.15rem;
+  line-height: 1.4;
+}
+
+.tarjeta__descripcion {
+  margin: 0;
+  color: var(--color-texto-secundario);
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+
+.tarjeta__flecha {
+  align-self: flex-end;
+  margin-top: 0.75rem;
+  color: var(--azul-accion);
+  font-size: 1.25rem;
+  line-height: 1;
+  transition: transform 180ms ease;
+}
+
+.tarjeta {
+  transition:
+    border-color 180ms ease,
+    box-shadow 180ms ease,
+    transform 180ms ease;
+}
+
+.tarjeta:hover {
+  border-color: var(--azul-medico);
+  box-shadow: 0 8px 24px rgb(10 25 41 / 8%);
+  transform: translateY(-3px);
+}
+
+.tarjeta:hover .tarjeta__flecha {
+  transform: translate(2px, -2px);
+}
+
+.tarjeta:focus-visible {
+  outline: 3px solid var(--azul-medico);
+  outline-offset: 3px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .tarjeta,
+  .tarjeta__flecha {
+    transition: none;
+  }
+
+  .tarjeta:hover {
+    transform: none;
+  }
+}
+
+
+@media (max-width: 375px) {
+  .navegacion__enlace > span:not(.navegacion__icono) {
+    display: none;
+  }
+
+  .navegacion__enlace {
+    justify-content: center;
+    min-height: 3rem;
   }
 }
