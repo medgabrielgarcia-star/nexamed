@@ -243,7 +243,7 @@ a{
   padding-block: 3rem;
   display: grid;
   grid-template-columns: 1.5fr 1fr 1.2fr 0.85fr;
-  gap: 2.5remrem;
+  gap: 2.5rem;
 }
 
 .pie__logo{
@@ -276,7 +276,7 @@ a{
 
 .pie__columna{
   margin: 0 0 1rem;
-  font-family: var(--fuenre-titulos);
+  font-family: var(--fuente-titulos);
   font-size: 1rem;
   font-weight: 700;
 }
