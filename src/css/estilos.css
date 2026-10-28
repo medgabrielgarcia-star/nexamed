@@ -31,7 +31,7 @@
   font-display: swap;
 }
 
-:root{
+:root {
   /* MARCA */
   --azul-medico: #0099CC;
   --azul-accion: #006B94;
@@ -48,15 +48,16 @@
   --blanco: #FFFFFF;
 
   /* ROLES(se usan en el resto del CSS) */
-  --color-fondo: var(--blanco);
-  --color-superficie: var(--gris-claro);
+  --color-fondo: #EAF2F6;
+  --color-superficie: #F5F8FA;
   --color-texto: var(--azul-profundo);
   --color-texto-secundario:var(--gris-texto);
   --color-enlace: var(--azul-accion);
+  --color-borde: #D4E3EC;
 
   /* TIPOGRAFIA */
-  --fuente-titulos: "Montserrat", system-ui, sans-serif;
-  --fuente-texto: "Roboto", system-ui, sans-serif;
+  --fuente-titulos: "Montserrat", system-ui, sans-seri;
+  --fuente-texto: "Roboto", system-ui, sans-serif; 
 }
 
 body{
@@ -150,7 +151,11 @@ a{
 
 .presentacion{
   max-width: 720px;
-  padding-block: clamp(3rem, 10vw, 7rem);
+  padding:clamp(1.5rem, 5vw, 3rem);
+  background-color: var(--color-superficie);
+  border: 1px solid var(--color-borde);
+  border-radius: 16px;
+  box-shadow: 0 4px 16px rgb(10 25 41 / 5%);
 }
 
 .presentacion__etiqueta{
@@ -166,8 +171,10 @@ a{
 
 .presentacion__descripcion{
   max-width: 600px;
-  color:var(---gris-texto);
+  margin-block: 0;
+  color:var(--color-texto-secundario);
   font-size: 1.1rem;
+  line-height: 1.7;
 }
 
 /* NAVEGACIÓN MOVIL */
@@ -220,5 +227,112 @@ a{
   .presentacion {
     padding-block: 2.5rem;
   }
+}
 
+/* FOOTER */
+
+.pie{
+  margin-top: 4rem;
+  background-color: var(--azul-profundo);
+  color: var(--blanco);
+}
+
+.pie__contenido {
+  width: min(100% - 2.5rem, 1100px);
+  margin-inline: auto;
+  padding-block: 3rem;
+  display: grid;
+  grid-template-columns: 1.5fr 1fr 1.2fr 0.85fr;
+  gap: 2.5remrem;
+}
+
+.pie__logo{
+  display: inline-block;
+  margin-bottom: 0.75rem;
+  color: var(--blanco);
+  font-family: var(--fuente-titulos);
+  font-size: 1.5rem;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.pie__logo span{
+  color:var(--azul-medico);
+}
+
+.pie__descripcion{
+  max-width: 260px;
+  margin: 0 0 1rem;
+  color:#D5E1E9;
+}
+
+.pie__aviso{
+  max-width: 280px;
+  margin:0;
+  color:#B9C9D5;
+  font-size: 0.875rem;
+  line-height:1.6;
+}
+
+.pie__columna{
+  margin: 0 0 1rem;
+  font-family: var(--fuenre-titulos);
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+.pie__columna ul {
+  display: grid;
+  gap: 0.65rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.pie__columna a {
+  color: #D5E1E9;
+  font-size: 0.9rem;
+  text-decoration: none;
+  overflow-wrap: anywhere;
+  transition: color 0.2s ease;
+}
+
+.pie__columna a:hover {
+  color: var(--azul-medico);
+  text-decoration: underline;
+  text-underline-offset: 0.2em;
+}
+
+.pie__columna a:focus-visible,
+.pie__logo:focus-visible {
+  outline: 2px solid var(--azul-medico);
+  outline-offset: 4px;
+}
+
+.pie__inferior {
+  border-top: 1px solid rgb(255 255 255 / 15%);
+  padding: 1rem 1.25rem;
+  text-align: center;
+}
+
+.pie__inferior p {
+  margin: 0;
+  color: #B9C9D5;
+  font-size: 0.8rem;
+}
+
+/* ADAPCION TABLETAS*/
+@media (max-width: 850px) {
+  .pie__contenido {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 2rem;
+  }
+}
+
+/* ADAPTACIÓN A MOVILES*/
+
+@media (max-width: 500px) {
+  .pie {
+    display: none;
+  }
 }
