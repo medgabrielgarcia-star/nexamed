@@ -61,14 +61,12 @@
 }
 
 /* BASE */
-
-*{
+*, *::before, *::after{
   box-sizing: border-box;
+  margin: 0;
 }
 
-
 body{
-  margin: 0; 
   font-family: var(--fuente-texto);
   color: var(--color-texto);
   background-color: var(--color-fondo);
@@ -154,7 +152,11 @@ a{
 }
 
 .presentacion{
-  max-width: 720px;
+  display: grid;
+  grid-template-columns: minmax(0, 1.2fr) minmax(0, 0.8fr);
+  align-items: center;
+  gap: 2rem;
+  max-width: 1100px;
   padding:clamp(1.5rem, 5vw, 3rem);
   background-color: var(--color-superficie);
   border: 1px solid var(--color-borde);
@@ -239,6 +241,8 @@ a{
 
   .presentacion {
     padding-block: 2rem 1.25rem;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
   }
 }
 
@@ -287,7 +291,11 @@ a{
   line-height:1.6;
 }
 
-.pie__columna{
+.pie__columna { 
+  margin: 0; 
+}
+
+.pie__columna h2 {
   margin: 0 0 1rem;
   font-family: var(--fuente-titulos);
   font-size: 1rem;
@@ -349,6 +357,13 @@ a{
     display: none;
   }
 }
+
+/*@media (max-width: 500px) {
+  .pie__contenido { grid-template-columns: 1fr; gap: 1.5rem; padding-block: 2rem; }
+  .pie__columna { display: none; }    
+  .pie__marca  { text-align: center; }
+  .pie__descripcion, .pie__aviso { max-width: none; }
+}*/
 
 
 
@@ -468,3 +483,65 @@ a{
     min-height: 3rem;
   }
 }
+
+/* ORIENTACION PARA EL VISITANTE */
+
+.orientacion {
+  margin-block: 3rem;
+}
+
+.orientacion__encabezado {
+  margin-bottom: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 0.8rem;
+}
+
+.orientacion__encabezado h2{
+  margin-bottom: 0.75rem;
+  font-size: clamp(1.6rem, 3vw, 2.2rem);
+  letter-spacing: -0.03em;
+}
+
+.orientacion__encabezado p {
+  color: var(--color-texto-secundario); 
+  font-size: 1.05rem;
+}
+
+.orientacion__lista{
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.orientacion__item {
+  padding: 1.5rem;
+  background-color: var(--color-superficie);
+  border: 1px solid var(--color-borde);
+  border-radius: 16px;
+}
+
+.orientacion__item h3{
+  margin-bottom: 0.5rem;
+  font-size: 1.05rem;
+}
+
+.orientacion__item p{
+  color: var(--color-texto-secundario);
+  font-size: 0.95rem;
+}
+
+@media (max-width: 550px){
+
+  .orientacion__encabezado{
+    margin: 1.5rem;
+    padding: 0.4rem;
+  }
+
+  .orientacion__lista{
+    grid-template-columns: 1fr;
+  }
+}
+
