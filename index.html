@@ -11,7 +11,7 @@
 <body>
   <header class="cabecera">
     <a class="marca" href="index.html" aria-label="Nexamed Edu, página de inicio">
-      <img src="src/imagenes/Nexamed-logo.png" alt="Nexamed Logo" height="40px">
+      <img src="src/imagenes/Nexamed-logo.png" alt="Nexamed Logo">
     </a>
 
     <nav class="navegacion" aria-label="navegación principal">
@@ -59,8 +59,25 @@
         <p class="presentacion__etiqueta">Tu salud, mejor comprendida</p>
         <h1>Aprende sobre tu salud con confianza</h1>
         <p class="presentacion__descripcion">Información médica clara y accesible para ayudarte a comprender mejor tu salud y tomar decisiones informadas. </p>
+        <form class="buscador__diccionario" role="search">
+          <label class="buscador__diccionario-etiqueta" for="buscar__termino">Diccionario médico</label>
+          <div class="buscador__diccionario-campo">
+            <input
+            type="search";
+            id="buscar__termino";
+            name="termino";
+            placeholder="¿Qué quieres aprender sobre salud?"
+            >
+            <button type="submit">Buscar</button>
+          </div>
+        </form>
       </div>
-      <div class="presentacion_visual"></div>
+      <div class="presentacion__visual">
+        <img 
+        src="src/imagenes/Médico sonriente con brazos abiertos.png"
+        alt="Médico de Nexamed dando la bienvenida"
+        >
+      </div>
     </section>
 
     <section class="secciones" aria-label="Explora Nexamed Edu">
@@ -91,10 +108,7 @@
 
        <a class="tarjeta" href="#">
         <span class="tarjeta__icono" aria-hidden="true">
-          <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M12 22s8-4 8-11V5l-8-3-8 3v6c0 7 8 11 8 11Z"/>
-            <path d="m9 12 2 2 4-4"/>
-          </svg>
+         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-stethoscope preview-icon"><path d="M11 2v2"/><path d="M5 2v2"/><path d="M5 3H4a2 2 0 0 0-2 2v4a6 6 0 0 0 12 0V5a2 2 0 0 0-2-2h-1"/><path d="M8 15a6 6 0 0 0 12 0v-3"/><circle cx="20" cy="10" r="2"/></svg>
         </span>
         <h2 class="tarjeta__titulo">Herramientas</h2>
         <p class="tarjeta__descripcion">Explora recursos interactivos para conocer mejor tu salud.</p>
