@@ -1,0 +1,122 @@
+[
+  {
+    "id": 1,
+    "termino": "Fiebre",
+    "definicion": "Elevación de la temperatura corporal por encima del rango normal, generalmente como respuesta a una infección u otra condición.",
+    "categoria": "Signos y síntomas"
+  },
+  {
+    "id": 2,
+    "termino": "Inflamación",
+    "definicion": "Respuesta del organismo ante una lesión, infección u otro estímulo, que puede producir enrojecimiento, calor, hinchazón y dolor.",
+    "categoria": "Signos y síntomas"
+  },
+  {
+    "id": 3,
+    "termino": "Edema",
+    "definicion": "Acumulación excesiva de líquido en los tejidos del cuerpo, que produce hinchazón.",
+    "categoria": "Signos y síntomas"
+  },
+  {
+    "id": 4,
+    "termino": "Dolor",
+    "definicion": "Experiencia sensorial y emocional desagradable asociada o similar a la que se relaciona con una lesión real o potencial.",
+    "categoria": "Signos y síntomas"
+  },
+  {
+    "id": 5,
+    "termino": "Fatiga",
+    "definicion": "Sensación persistente de cansancio o falta de energía que puede tener diversas causas.",
+    "categoria": "Signos y síntomas"
+  }, 
+  {
+    "id": 6,
+    "termino": "Hipertensión arterial",
+    "definicion": "Condición caracterizada por una elevación persistente de la presión arterial por encima de los valores recomendados.",
+    "categoria": "Enfermedades y condiciones"
+  },
+  {
+    "id": 7,
+    "termino": "Diabetes mellitus",
+    "definicion": "Enfermedad metabólica caracterizada por niveles elevados de glucosa en sangre debido a alteraciones en la producción o acción de la insulina.",
+    "categoria": "Enfermedades y condiciones"
+  },
+  {
+    "id": 8,
+    "termino": "Anemia",
+    "definicion": "Condición en la que la concentración de hemoglobina en la sangre es inferior a los valores normales para la edad, sexo y otras condiciones.",
+    "categoria": "Enfermedades y condiciones"
+  },
+  {
+    "id": 9,
+    "termino": "Infección",
+    "definicion": "Proceso que ocurre cuando microorganismos como bacterias, virus, hongos o parásitos invaden y se multiplican en el organismo.",
+    "categoria": "Enfermedades y condiciones"
+  },
+  {
+    "id": 10,
+    "termino": "Obesidad",
+    "definicion": "Enfermedad crónica caracterizada por una acumulación excesiva de grasa corporal que puede afectar la salud.",
+    "categoria": "Enfermedades y condiciones"
+  }, 
+    {
+    "id": 11,
+    "termino": "Glucosa",
+    "definicion": "Azúcar que circula en la sangre y constituye una de las principales fuentes de energía del organismo.",
+    "categoria": "Exámenes y mediciones"
+  },
+  {
+    "id": 12,
+    "termino": "Hemoglobina",
+    "definicion": "Proteína presente en los glóbulos rojos que transporta oxígeno desde los pulmones hacia los tejidos.",
+    "categoria": "Exámenes y mediciones"
+  },
+  {
+    "id": 13,
+    "termino": "Colesterol",
+    "definicion": "Sustancia grasa necesaria para el organismo, que forma parte de las membranas celulares y participa en la producción de hormonas. Sus niveles elevados pueden aumentar el riesgo cardiovascular.",
+    "categoria": "Exámenes y mediciones"
+  },
+  {
+    "id": 14,
+    "termino": "Presión arterial",
+    "definicion": "Fuerza que ejerce la sangre contra las paredes de las arterias. Se expresa mediante dos valores: presión sistólica y diastólica.",
+    "categoria": "Exámenes y mediciones"
+  },
+  {
+    "id": 15,
+    "termino": "Frecuencia cardíaca",
+    "definicion": "Número de veces que el corazón late por minuto.",
+    "categoria": "Exámenes y mediciones"
+  },
+  {
+    "id": 16,
+    "termino": "Diagnóstico",
+    "definicion": "Proceso mediante el cual un profesional de salud identifica una enfermedad o condición a partir de los síntomas, signos, antecedentes y pruebas disponibles.",
+    "categoria": "Conceptos médicos"
+  },
+  {
+    "id": 17,
+    "termino": "Pronóstico",
+    "definicion": "Estimación de la evolución probable de una enfermedad o condición y de sus posibles resultados.",
+    "categoria": "Conceptos médicos"
+  },
+  {
+    "id": 18,
+    "termino": "Tratamiento",
+    "definicion": "Conjunto de medidas e intervenciones destinadas a controlar, aliviar o curar una enfermedad o condición.",
+    "categoria": "Conceptos médicos"
+  },
+  {
+    "id": 19,
+    "termino": "Prevención",
+    "definicion": "Conjunto de acciones destinadas a evitar enfermedades, reducir sus riesgos o detectar problemas de salud de manera temprana.",
+    "categoria": "Conceptos médicos"
+  },
+  {
+    "id": 20,
+    "termino": "Factor de riesgo",
+    "definicion": "Característica, condición o exposición que aumenta la probabilidad de desarrollar una enfermedad o presentar un problema de salud.",
+    "categoria": "Conceptos médicos"
+  }
+]
