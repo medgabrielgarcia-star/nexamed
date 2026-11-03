@@ -135,8 +135,9 @@ a{
 }
 
 .navegacion__enlace:hover, .navegacion__enlace[aria-current="page"] {
-  color: var(--azul-accion);
-  background-color: var(--gris-claro);
+  color: var(--color-superficie);
+  background-color: var(--violeta-accion);
+  padding: 0.4rem 0.8rem;
 }
 
 .navegacion__icono{
@@ -377,7 +378,7 @@ a{
 
 /* TERMINOS MEDICOS POPULARES */
 
-.terminos__populares {
+/*.terminos__populares {
   margin-block: 3rem;
 }
 
@@ -387,7 +388,6 @@ a{
 }
 
 .terminos__populares h2 {
-  margin-bottom: 0.75rem;
   font-size: clamp(1.6rem, 3vw, 2.2rem);
   letter-spacing: -0.03em;
 }
@@ -396,8 +396,16 @@ a{
   margin-bottom: 1.5rem;
   color: var(--color-texto-secundario);
   font-size: 1.05rem;
+}*/ 
+
+.terminos__populares {
+  margin-block: 3rem;
 }
 
+.terminos__populares h2, p{
+  text-align: center;
+  margin-bottom: 1rem;
+}
 .lista__terminos {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -448,13 +456,14 @@ a{
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 0.8rem;
+  gap: 0.5rem;
 }
 
 .orientacion__encabezado h2{
   margin-bottom: 0.75rem;
   font-size: clamp(1.6rem, 3vw, 2.2rem);
   letter-spacing: -0.03em;
+  text-align: center;
 }
 
 .orientacion__encabezado p {
@@ -469,14 +478,14 @@ a{
 }
 
 .orientacion__item {
-  padding: 1.5rem;
+  padding: 1.7rem;
   background-color: var(--color-superficie);
   border: 1px solid var(--color-borde);
   border-radius: 16px;
 }
 
 .orientacion__item h3{
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.9rem;
   font-size: 1.05rem;
 }
 
@@ -498,27 +507,19 @@ a{
   margin-inline: auto;
   padding-block: 3rem;
   display: grid;
-  grid-template-columns: 1.5fr 1fr 1.2fr 0.85fr;
-  gap: 2.5rem;
+  grid-template-columns: 1.5fr 1fr 1.2fr 1fr;
+  gap: 2rem;
 }
 
-.pie__logo{
-  display: inline-block;
-  margin-bottom: 0.75rem;
-  color: var(--blanco);
-  font-family: var(--fuente-titulos);
-  font-size: 1.5rem;
-  font-weight: 700;
-  text-decoration: none;
+.pie__logo img{
+  width: 240px;
+  height: auto;
 }
 
-.pie__logo span{
-  color:var(--azul-medico);
-}
 
 .pie__descripcion{
   max-width: 260px;
-  margin: 0 0 1rem;
+  margin: 0.7rem 0 1rem;
   color:#D5E1E9;
 }
 
