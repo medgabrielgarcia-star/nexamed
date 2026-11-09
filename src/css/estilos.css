@@ -162,6 +162,7 @@ a{
 .contenido{
   width: min(100% - 2rem, 1100px);
   margin-inline: auto;
+  margin-top: 3rem;
 }
 
 .presentacion{
@@ -414,10 +415,11 @@ a{
 
 .tarjeta__termino {
   min-width: 0;
-  padding: 1.25rem;
+  padding: 1.5rem 2rem;
   background-color: var(--color-superficie);
   border: 1px solid var(--color-borde);
   border-radius: 16px;
+  flex: 1;
 }
 
 .tarjeta__termino h3 {
@@ -478,7 +480,7 @@ a{
 }
 
 .orientacion__item {
-  padding: 1.7rem;
+  padding: 2.5rem 1.7rem;
   background-color: var(--color-superficie);
   border: 1px solid var(--color-borde);
   border-radius: 16px;
@@ -492,6 +494,7 @@ a{
 .orientacion__item p{
   color: var(--color-texto-secundario);
   font-size: 0.95rem;
+  text-align: start;
 }
 
 /* FOOTER */
@@ -511,6 +514,11 @@ a{
   gap: 2rem;
 }
 
+.pie__marca{
+    display: flex;
+    flex-direction: column;
+}
+
 .pie__logo img{
   width: 240px;
   height: auto;
@@ -521,6 +529,7 @@ a{
   max-width: 260px;
   margin: 0.7rem 0 1rem;
   color:#D5E1E9;
+  text-align: start;
 }
 
 .pie__aviso{
@@ -529,6 +538,7 @@ a{
   color:#B9C9D5;
   font-size: 0.875rem;
   line-height:1.6;
+  text-align: start;
 }
 
 .pie__columna { 
@@ -582,7 +592,7 @@ a{
   font-size: 0.8rem;
 }
 
-@media (min-width: 501px) and (max-width: 920px) {
+@media (min-width: 501px) and (max-width: 930px) {
 
   .cabecera {
     position: relative;
@@ -613,6 +623,8 @@ a{
 
   .navegacion.active {
     display: flex;
+    flex-direction: column;
+    align-items: start;
   }
 
   .navegacion__enlace {
@@ -787,6 +799,14 @@ a{
     font-size: 3em;
 }
 
+.articulos__destacados h2{
+    text-align: center;
+}
+
+.articulos__recientes h2{
+    text-align: center;
+}
+
 
 .articulo__destacado{
     display: grid;
@@ -812,6 +832,7 @@ a{
 
 .articulo__informacion{
     padding: 2rem;
+    background-color: var(--blanco);
 }
 
 .articulo__categoria{
