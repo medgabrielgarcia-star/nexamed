@@ -1056,6 +1056,12 @@ a{
     margin-bottom: 1rem;
 }
 
+.articulo > section h3 {
+    font-size: 1.6rem;
+    color: var(--color-texto);
+    margin-bottom: 1rem;
+}
+
 .articulo > section p {
     margin-bottom: 1rem;
     line-height: 1.8;
@@ -1145,11 +1151,27 @@ a{
         padding: 1.25rem;
     }
 
-    .articulo > section h2 {
+    .articulo > section h2 h3 {
         font-size: 1.4rem;
     }
 
     .articulo__imagen-principal {
         margin-bottom: 2rem;
     }
+}
+
+.articulo__tabla{
+    padding: 0.82rem;
+    margin: 1.4rem;
+}
+
+.articulo__tabla td{
+    border-top:1px solid var(--violeta-accion);
+    padding: 0.50rem;
+    text-align: center;
+}
+
+#prediabetes td{
+    border-top: none;
+    border-bottom: 1px solid var(--violeta-accion);
 }
